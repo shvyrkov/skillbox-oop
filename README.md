@@ -1,11 +1,11 @@
 # skillbox-oop
 OOP project - CMS
-Курсовая работа
-Задача:
-Разрабатываемую в течение курса CMS нужно доработать до полноценного веб-сайта.
-Необходимо разработать ваш личный сайт-блог, на котором любой желающий может 
-зарегистрироваться и оставить комментарии к любой записи в блоге и подписаться 
-на получение уведомлений о новой статье в блоге. 
-Внешний вид страницы вы определяете самостоятельно, но используя framework bootstrap v4, 
-который мы подключили в одной из домашних работ. 
-Документация и компоненты можно посмотреть в прикрепленных материалах.
+Course paper
+Task:
+The CMS developed during the course needs to be refined to a full-fledged website.
+It is necessary to develop your personal blog site, where anyone can
+register and leave comments on any blog entry and subscribe
+to receive notifications about a new blog article.
+You determine the appearance of the page yourself, but using the bootstrap v4 framework,
+which we connected in one of our homework.
+Documentation and components can be viewed in the attached materials.
