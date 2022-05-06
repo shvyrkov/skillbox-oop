@@ -1,3 +1,3 @@
 # skillbox-oop
 OOP project - CMS
-Course paper
+Course paper OOP
