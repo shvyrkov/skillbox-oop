@@ -61,19 +61,19 @@ class AdminCMSView extends AdminView
                 $errors['subtitle'] = 'Название подзаголовка не должно быть больше ' . MAX_SUBTITLE_LENGTH . ' символов';
             }
 
-            if ($people && !Helper::checkLength($people, MIN_PEOPLE_LENGTH, MAX_PEOPLE_LENGTH)) {
+            if (!Helper::checkLength($people, MIN_PEOPLE_LENGTH, MAX_PEOPLE_LENGTH)) {
                 $errors['people'] = 'Количество символов в поле не должно быть больше ' . MAX_PEOPLE_LENGTH;
             }
 
-            if ($duration && !Helper::checkLength($duration, MIN_PEOPLE_LENGTH, MAX_DURATION_LENGTH)) {
+            if (!Helper::checkLength($duration, MIN_PEOPLE_LENGTH, MAX_DURATION_LENGTH)) {
                 $errors['duration'] = 'Количество символов в поле не должно быть больше ' . MAX_DURATION_LENGTH;
             }
 
-            if ($description && !Helper::checkLength($description, MIN_TITLE_LENGTH, MAX_DESCRIPTION_LENGTH)) {
+            if (!Helper::checkLength($description, MIN_TITLE_LENGTH, MAX_DESCRIPTION_LENGTH)) {
                 $errors['description'] = 'Должно быть не меньше ' . MIN_TITLE_LENGTH . ' и не больше ' . MAX_DESCRIPTION_LENGTH . ' символов';
             }
 
-            if ($author && !Helper::checkLength($author, MIN_TITLE_LENGTH, MAX_AUTHOR_LENGTH)) {
+            if (!Helper::checkLength($author, MIN_TITLE_LENGTH, MAX_AUTHOR_LENGTH)) {
                 $errors['author'] = 'Должно быть не меньше ' . MIN_TITLE_LENGTH . ' и не больше ' . MAX_AUTHOR_LENGTH . ' символов';
             }
 
@@ -88,8 +88,12 @@ class AdminCMSView extends AdminView
             // if (!is_numeric($method)) {
             //     $errors['method'] = 'Ошибка ввода. Обратитесь к Администратору.';
             // }
-// echo "<br>";
-// var_dump($methods);
+echo "author:<br>";
+var_dump(iconv_strlen($author));
+echo "if <br>";
+var_dump(!$author && !Helper::checkLength($author, MIN_TITLE_LENGTH, MAX_AUTHOR_LENGTH));
+echo "<br>";
+var_dump($errors);
 
             if ($_FILES['myfile']['name'] != '') { // Проверка на наличие файла для загрузки
                 if (!empty($_FILES['myfile']['error'])) { // Проверяем наличие ошибок
